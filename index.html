@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Behzod Ahmedov — Frontend Portfolio</title>
+<meta name="description" content="Frontend portfolio: landing pages, business websites and JavaScript tools." />
+
+<style>
+:root{
+  --bg:#050812;
+  --panel:rgba(255,255,255,0.05);
+  --text:rgba(255,255,255,0.92);
+  --muted:rgba(255,255,255,0.65);
+  --line:rgba(255,255,255,0.12);
+  --accent:#60a5fa;
+  --accent2:#34d399;
+  --shadow:0 18px 60px rgba(0,0,0,0.45);
+  --radius:18px;
+  --max:1100px;
+  --sans:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:var(--sans);
+  background:
+    radial-gradient(900px 500px at 80% -10%, rgba(96,165,250,0.18), transparent 60%),
+    radial-gradient(900px 500px at 10% 10%, rgba(52,211,153,0.12), transparent 60%),
+    linear-gradient(180deg,#04060c 0%,#050812 40%,#04060c 100%);
+  color:var(--text);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 18px;}
+header{padding:28px 0 10px;}
+h1{margin:0;font-size:36px;letter-spacing:-0.6px;}
+.subtitle{color:var(--muted);margin-top:8px;max-width:70ch;}
+
+section{padding:20px 0;}
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+.card{
+  border:1px solid var(--line);
+  background:var(--panel);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.card h2{margin:0;font-size:20px;}
+.card p{margin:0;color:var(--muted);font-size:14px;}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.tag{
+  font-size:12px;
+  font-weight:700;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,0.05);
+  color:var(--muted);
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:auto;
+}
+.btn{
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,0.07);
+  color:var(--text);
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+  transition:0.2s ease;
+}
+.btn:hover{
+  background:rgba(255,255,255,0.12);
+}
+.btn.primary{
+  border-color:rgba(96,165,250,0.5);
+  background:rgba(96,165,250,0.15);
+}
+.btn.primary:hover{
+  background:rgba(96,165,250,0.25);
+}
+
+footer{
+  padding:30px 0 40px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+  margin-top:30px;
+}
+
+@media(min-width:800px){
+  .grid{grid-template-columns:repeat(3,1fr);}
+  h1{font-size:44px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Behzod Ahmedov</h1>
+    <div class="subtitle">
+      Frontend developer. Creating clean, responsive websites and practical JavaScript tools.
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <section>
+      <div class="grid">
+
+        <!-- SmartCapital -->
+        <div class="card">
+          <h2>SmartCapital</h2>
+          <p>Financial consulting landing page with clean corporate design and responsive layout.</p>
+          <div class="tags">
+            <div class="tag">HTML</div>
+            <div class="tag">CSS</div>
+            <div class="tag">Responsive</div>
+          </div>
+          <div class="buttons">
+            <a class="btn primary" href="https://behzodcoder.github.io/smartcapital-landing/" target="_blank">Live Demo</a>
+            <a class="btn" href="https://github.com/Behzodcoder/smartcapital-landing" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <!-- BrewLab -->
+        <div class="card">
+          <h2>BrewLab</h2>
+          <p>Coffee shop landing page with menu filter, search and booking form validation.</p>
+          <div class="tags">
+            <div class="tag">HTML</div>
+            <div class="tag">CSS</div>
+            <div class="tag">JavaScript</div>
+          </div>
+          <div class="buttons">
+            <a class="btn primary" href="https://behzodcoder.github.io/brewlab-landing/" target="_blank">Live Demo</a>
+            <a class="btn" href="https://github.com/Behzodcoder/brewlab-landing" target="_blank">Code</a>
+          </div>
+        </div>
+
+        <!-- Loan Calculator -->
+        <div class="card">
+          <h2>Loan Calculator</h2>
+          <p>Annuity loan calculator with chart (Canvas API), schedule table and LocalStorage support.</p>
+          <div class="tags">
+            <div class="tag">JavaScript</div>
+            <div class="tag">Canvas</div>
+            <div class="tag">LocalStorage</div>
+          </div>
+          <div class="buttons">
+            <a class="btn primary" href="https://behzodcoder.github.io/loan-calculator/" target="_blank">Live Demo</a>
+            <a class="btn" href="https://github.com/Behzodcoder/loan-calculator" target="_blank">Code</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Behzod Ahmedov — Frontend Portfolio
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
